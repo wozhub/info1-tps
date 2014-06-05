@@ -38,10 +38,11 @@ int my_strcmp (const char *t, const char *s) ;
 Escribir una función que reciba una cadena de caracteres como argumento, y la convierta a minúsculas o mayúsculas, de acuerdo a una opción ingresada por el usuario a través del parámetro "format", cuyo tipo es case, un tipo enumerativo compuesto por los tokens UPPERCASE y LOWERCASE:
 
 ```C 
-typedef enum { UPPERCASE, LOWERCASE } case ;
+typedef enum { UPPERCASE, LOWERCASE } case;
 ```
 
-Prototipo de la función pedida: ```C void change_case (char * , case ); ```
+Prototipo de la función pedida: ```C
+void change_case (char * , case ); ```
 
 Nota: Implemente esta función invocando a las dos funciones de los ejercicios previos.
 
