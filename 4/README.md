@@ -41,13 +41,21 @@ Escribir una función que reciba una cadena de caracteres como argumento, y la c
 typedef enum { UPPERCASE, LOWERCASE } case;
 ```
 
-Prototipo de la función pedida: ```C
-void change_case (char * , case ); ```
+Prototipo de la función pedida:
+
+```C
+void change_case (char * , case );
+```
 
 Nota: Implemente esta función invocando a las dos funciones de los ejercicios previos.
 
 ## 4.20. Promedio
 
-
+Escribir una función que reciba un puntero a una secuencia de doubles y su longitud como parámetros, y retorne el promedio aritmético de los valores contenidos en él.
 
 ## 4.21. Desvio
+
+Idem para el desvío estándar.
+
+Nota: reutilice el código desarrollado en el ejercicio anterior.
+
