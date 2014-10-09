@@ -28,12 +28,11 @@ unsigned int maximo(int *matriz, unsigned int n, unsigned int m)
 {
    unsigned int i,j, maximo=0;
    
-   for ( i=0; i<n; i++ )
-   {    for ( j=0; j<m; j++)
-	{
-        if ( *(matriz+(i+j*n)) > maximo )
-        { maximo = *(matriz+(i+j*n) ); }
-	}
+   for ( i=0; i<n; i++ ) {
+       for ( j=0; j<m; j++) {
+           if ( *(matriz+(i+j*n)) > maximo ) {
+              maximo = *(matriz+(i+j*n) ); }
+	    }
    }
 
     return maximo;   

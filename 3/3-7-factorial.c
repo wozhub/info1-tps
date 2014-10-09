@@ -34,9 +34,11 @@ int factorial(int x)
     unsigned long factorial=1;
  
     unsigned contador;
-    for (contador=1;contador<=x;contador++)
-    {   
-//d      printf("%d*%d\n",factorial,contador);
+    for (contador=1;contador<=x;contador++) { 
+        #ifdef DEBUG
+        printf("%d*%d\n",factorial,contador);
+        #endif  
+        
         factorial=factorial*contador; }
 
     return factorial;

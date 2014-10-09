@@ -9,8 +9,7 @@
 
 double traza(double *matriz, unsigned int n);
 
-void main()
-{
+void main() {
     double matriz1[3][3]={ {1,2,3}, {4,5,6}, {7,8,9} };
     
     int auxY,auxX;
@@ -29,8 +28,13 @@ double traza(double *matriz, unsigned int n)
    unsigned int indice;
    double t=0;
    
-   for ( indice=0; indice<(n*n); indice+=(n+1) )
-   { t+=*(matriz+indice); /* printf("%f\n",t); */ }
+   for ( indice=0; indice<(n*n); indice+=(n+1) ) {
+       t+=*(matriz+indice); 
+
+       #ifdef DEBUG
+       printf("%f\n",t);
+       #endif
+   }
 
    return t;   
 }

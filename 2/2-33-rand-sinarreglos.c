@@ -22,19 +22,24 @@ int main ()
   for (vuelta=0;vuelta<maxvuelta;vuelta++)
   { 
     azar=rand() % 10; //obtengo un numero al azar de 1 a 10
-    //printf("azar = %d\n",azar);
+
+    #ifdef DEBUG
+    printf("azar = %d\n",azar);
+    #endif
 
     //sumo 1 al contador de ocurrencias que corresponda
-    if (azar==0) { c0++; }
-    if (azar==1) { c1++; }
-    if (azar==2) { c2++; }
-    if (azar==3) { c3++; }
-    if (azar==4) { c4++; }
-    if (azar==5) { c5++; }
-    if (azar==6) { c6++; }
-    if (azar==7) { c7++; }
-    if (azar==8) { c8++; }
-    if (azar==9) { c9++; }
+    switch(azar){
+        case 0: c0++; break;
+        case 1: c1++; break;
+        case 2: c2++; break;
+        case 3: c3++; break;
+        case 4: c4++; break;
+        case 5: c5++; break;
+        case 6: c6++; break;
+        case 7: c7++; break;
+        case 8: c8++; break;
+        case 9: c9++; break;
+    }
   }
 
   //calulo los porcentajes de ocurrencias

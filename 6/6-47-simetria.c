@@ -36,13 +36,12 @@ bool verificaSimetria(int *matriz, unsigned int n)
    unsigned int i,j,ij,ji;
    int simetria=1;
    
-   for ( i=0; i<n; i++ )
-   {    for ( j=0; j<n; j++)
-	{
+   for ( i=0; i<n; i++ ) {    
+       for ( j=0; j<n; j++) {
         ij=*(matriz+(i+j*n)); ji=*(matriz+(j+i*n));
         if ( ij != ji ) { simetria=0; }
-	}
-   }
+	    }
+    }
 
     return simetria;   
 }

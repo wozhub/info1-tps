@@ -33,29 +33,34 @@ int main()
     printf("transformada: %s\n",palabra);
 }
 
-int change_case(char *palabra, Formato f)
-{
+int change_case(char *palabra, Formato f) {
+
     unsigned int indice;
-    for (indice=0; *(palabra+indice)!='\0'; indice++)
-    {
-//d        printf("ascii code:%d\t",*(palabra+indice) );
-//d        printf("ascii char:%c\t",*(palabra+indice) );
+    for (indice=0; *(palabra+indice)!='\0'; indice++) {
+        #ifdef DEBUG
+        printf("ascii code:%d\t",*(palabra+indice) );
+        printf("ascii char:%c\t",*(palabra+indice) );
+        #endif
 
         //si voy a convertir en mayusculas, me fijo que el char este entre a y z
-       if ( f==0 && *(palabra+indice) >= 'a' && *(palabra+indice) <= 'z' )
-       {
-//d            printf("ascii char:%c\n",*(palabra+indice)+'A'-'a' );
+       if ( f==0 && *(palabra+indice) >= 'a' && *(palabra+indice) <= 'z' ) {
+            #ifdef DEBUG
+            printf("ascii char:%c\n",*(palabra+indice)+'A'-'a' );
+            #endif
             *(palabra+indice)=(*(palabra+indice)+'A'-'a');
        }
        //si voy a convertir en minusculas, me fijo quee el char este entre A y Z
-       else if ( f==1 && *(palabra+indice) >= 'A' && *(palabra+indice) <= 'Z' )
-       {
-//d            printf("ascii char:%c\n",*(palabra+indice)-'A'+'a' );
+       else if ( f==1 && *(palabra+indice) >= 'A' && *(palabra+indice) <= 'Z' ) {
+            #ifdef DEBUG
+            printf("ascii char:%c\n",*(palabra+indice)-'A'+'a' );
+            #endif
             *(palabra+indice)=(*(palabra+indice)-'A'+'a');
        }
        else //si no entro en ningun if, el char ya esta en el case necesario =)
        {
-//d            printf("ascii char:%c\n",*(palabra+indice));
+            #ifdef DEBUG
+            printf("ascii char:%c\n",*(palabra+indice));
+            #endif
        }
     }   
 

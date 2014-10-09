@@ -22,7 +22,10 @@ int main()
     //la suma inicia en 0, mientras n1 sea menora n2, n1++
     for (suma=0;numero1 <= numero2;numero1++)
     {
-//d    	printf("Sumando %d\n",numero1);
+        #ifdef DEBUG
+        printf("Sumando %d\n",numero1);
+        #endif
+
 	    suma+=numero1;  //sumo
     }
 
